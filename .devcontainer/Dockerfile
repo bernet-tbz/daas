@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/devcontainers/universal:5.1.4-noble
+FROM mcr.microsoft.com/devcontainers/universal:5-noble
 
 # -------------------------
 # kind
