@@ -1,5 +1,5 @@
 {
-  "name": "Python Multi-Kernel DevContainer",
+  "name": "Docker und Kubernetes DevContainer",
   
   "image": "mcr.microsoft.com/devcontainers/universal:2",
   
