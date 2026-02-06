@@ -1,9 +1,7 @@
 {
   "name": "Docker und Kubernetes DevContainer",
   
-  "build": {
-    "dockerfile": "Dockerfile"
-  },
+  "image": "mcr.microsoft.com/devcontainers/universal:5-noble",
   
   "workspaceFolder": "/workspace",
 
