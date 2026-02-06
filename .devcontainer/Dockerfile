@@ -14,8 +14,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     uuid-runtime \
     openssh-client \
     ca-certificates \
-    docker.io \
- && rm -rf /var/lib/apt/lists/*
+    && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /workspace
 
