@@ -17,14 +17,18 @@
   },
   
   "customizations": {
+    "vscode": {
+      "settings": {
+        "python.venvPath": "/opt"
+      },
       "extensions": [
         "ms-python.python",
         "ms-toolsai.jupyter"
       ]
+    }
   },
   
   "runArgs": [
     "--security-opt=label=disable"
   ]
-  
 }
