@@ -1,13 +1,17 @@
 {
-  "name": "Docker und Kubernetes DevContainer",
+  "name": "Python Multi-Kernel DevContainer",
   
-  "image": "mcr.microsoft.com/devcontainers/universal:5-noble",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
   
   "workspaceFolder": "/workspace",
 
   "mounts": [
     "source=${localWorkspaceFolder},target=/workspace,type=bind"
   ],
+
+  "remoteUser": "root",
 
   "containerEnv": {
     "DISPLAY": "",
