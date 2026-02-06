@@ -30,8 +30,6 @@
   
   "runArgs": [
     "--security-opt=label=disable"
-  ],
-  
-  "postCreateCommand": "curl -L https://github.com/mc-b/duk/archive/refs/heads/master.tar.gz | tar xz -C /workspace"
+  ]
   
 }
