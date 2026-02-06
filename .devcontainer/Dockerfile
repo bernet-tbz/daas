@@ -1,6 +1,6 @@
 FROM mcr.microsoft.com/devcontainers/universal:5-noble
 
-RUN mkdir -p /workspace && chown -R vscode:vscode /workspace
+RUN mkdir -p /workspace 
 
 # -------------------------
 # kind
