@@ -1,6 +1,7 @@
 FROM mcr.microsoft.com/devcontainers/universal:5-noble
 
 RUN mkdir -p /workspace 
+WORKDIR /workspace
 
 # -------------------------
 # kind
