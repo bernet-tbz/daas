@@ -32,9 +32,9 @@
   
   "features": {
       "ghcr.io/devcontainers/features/docker-in-docker:2": {},
-      "ghcr.io/devcontainers/features/kubectl:1": {},
-      "ghcr.io/devcontainers/features/helm:1": {},
-      "ghcr.io/devcontainers/features/python:1": { "version": "3.12" }    
+      "ghcr.io/devcontainers/features/kubectl:2": {},
+      "ghcr.io/devcontainers/features/helm:2": {},
+      "ghcr.io/devcontainers/features/python:2": { "version": "3.12" }    
   },  
   
   "runArgs": [
