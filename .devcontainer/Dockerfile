@@ -5,9 +5,6 @@ ENV PYTHONUNBUFFERED=1
 
 # System Dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    python3 \
-    python3-venv \
-    python3-pip \
     curl \
     jq \
     git \
@@ -25,15 +22,6 @@ ENV SHELL=/bin/bash \
 # Mount for docker-in-docker 
 VOLUME [ "/var/lib/docker" ]    
 
-# -------------------------
-# Jupyter Base
-# -------------------------
-RUN python3 -m venv /opt/jupyter \
- && /opt/jupyter/bin/pip install --upgrade pip \
- && /opt/jupyter/bin/pip install jupyterlab ipykernel \
- && /opt/jupyter/bin/python -m ipykernel install \
-      --sys-prefix --name=jupyter --display-name="Python (jupyter)"
-      
 # -------------------------
 # kind
 # -------------------------
