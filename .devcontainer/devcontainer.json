@@ -1,4 +1,37 @@
 {
+  "name": "Python Multi-Kernel DevContainer",
+  
   "image": "mcr.microsoft.com/devcontainers/universal:2",
-  "features": {}
+  
+  "workspaceFolder": "/workspace",
+
+  "mounts": [
+    "source=${localWorkspaceFolder},target=/workspace,type=bind"
+  ],
+
+  "remoteUser": "root",
+
+  "containerEnv": {
+    "DISPLAY": "",
+    "WAYLAND_DISPLAY": ""
+  },
+  
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.venvPath": "/opt"
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter"
+      ]
+    }
+  },
+  
+  "runArgs": [
+    "--security-opt=label=disable"
+  ],
+  
+  "postCreateCommand": "curl -L https://github.com/mc-b/duk/archive/refs/heads/main.tar.gz | tar xz -C /workspace"
+  
 }
