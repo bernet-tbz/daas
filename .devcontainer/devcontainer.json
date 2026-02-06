@@ -11,23 +11,16 @@
     "source=${localWorkspaceFolder},target=/workspace,type=bind"
   ],
 
-  "remoteUser": "root",
-
   "containerEnv": {
     "DISPLAY": "",
     "WAYLAND_DISPLAY": ""
   },
   
   "customizations": {
-    "vscode": {
-      "settings": {
-        "python.venvPath": "/opt"
-      },
       "extensions": [
         "ms-python.python",
         "ms-toolsai.jupyter"
       ]
-    }
   },
   
   "runArgs": [
