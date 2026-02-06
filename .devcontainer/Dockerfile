@@ -45,6 +45,4 @@ RUN curl -Lo kind "https://kind.sigs.k8s.io/dl/latest/kind-linux-amd64" \
     
 RUN curl -L https://github.com/mc-b/duk/archive/refs/heads/master.tar.gz | tar xz --strip-components=3 duk-master/data/jupyter --exclude='*/'
 
-CMD [ "sleep", "infinity" ]
-
     
