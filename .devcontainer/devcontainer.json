@@ -6,10 +6,6 @@
 		"context": "."
 	},
 	
-	"mounts": [
-		"source=${localWorkspaceFolder},target=/workspace,type=bind"
-	],
-	
 	"customizations": {
 		"vscode": {
 			"settings": {
