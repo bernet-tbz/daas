@@ -29,7 +29,7 @@
 		}
 	},
 	
-	"postCreateCommand":"cd /workspaces/duk && curl -L https://github.com/mc-b/duk/archive/refs/heads/master.tar.gz | tar xz --strip-components=3 duk-master/data/jupyter --exclude='*/'","remoteUser":"vscode",
+	"postCreateCommand":"mkdir -p /workspaces/duk/data && cd /workspaces/duk/data && curl -L https://github.com/mc-b/duk/archive/refs/heads/master.tar.gz | tar xz --strip-components=3 duk-master/data/jupyter --exclude='*/'","remoteUser":"vscode",
 	
 	"runArgs": [
 		"--security-opt=label=disable"
