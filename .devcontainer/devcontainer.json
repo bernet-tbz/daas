@@ -1,5 +1,5 @@
 {
-  "name": "Python Multi-Kernel DevContainer",
+  "name": "Docker und Kubernetes",
   
   "build": {
     "dockerfile": "Dockerfile"
@@ -21,7 +21,8 @@
   "customizations": {
     "vscode": {
       "settings": {
-        "python.venvPath": "/opt"
+        "python.venvPath": "/opt",
+        "python.defaultInterpreterPath": "/opt/jupyter/bin/python"        
       },
       "extensions": [
         "ms-python.python",
@@ -31,9 +32,8 @@
   },
   
   "features": {
-      "ghcr.io/devcontainers/features/docker-in-docker:2": {},
-      "ghcr.io/devcontainers/features/python:1": { "version": "3.12" }    
-  },  
+      "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },    
   
   "runArgs": [
     "--security-opt=label=disable"
