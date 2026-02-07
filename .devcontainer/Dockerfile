@@ -41,11 +41,14 @@ RUN python3 -m venv /opt/jupyter \
       --sys-prefix --name=jupyter --display-name="Python (jupyter)"
 
 # -------------------------
-# kind
+# kind && kubectl
 # -------------------------
 RUN curl -Lo kind "https://kind.sigs.k8s.io/dl/latest/kind-linux-amd64" \
     && chmod +x kind \
     && mv kind /usr/local/bin/
+    
+RUN curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl" \
+    && install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl    
         
 # Mount for docker-in-docker 
 VOLUME [ "/var/lib/docker" ]    
