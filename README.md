@@ -1,2 +1,2 @@
 # duk
-Docker und Kuberneste
+Docker und Kubernetes
