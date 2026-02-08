@@ -1,6 +1,6 @@
 # duk
 
-Docker und Kubernetes.
+Docker und Kubernetes as a Service
 
 Die zwei Profile sind wie folgt:
 * dd - Docker Desktop, d.h. docker CLI ist installiert es wird aber auf die Docker Desktop Umgebung zugegriffen
