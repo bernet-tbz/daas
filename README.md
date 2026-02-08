@@ -1,9 +1,20 @@
 # duk
-Docker und Kubernetes
+
+Docker und Kubernetes.
+
+Die zwei Profile sind wie folgt:
+* dd - Docker Desktop, d.h. docker CLI ist installiert es wird aber auf die Docker Desktop Umgebung zugegriffen
+* dind - Docker in Docker, d.h. es läuft eine interne Docker Umgebung im Dev Container
 
 ### Kubernetes Cluster (kind) erstellen
 
+In der `dd` Variante kann ausserhalb des Dev Containers ein Kubernetes Cluster erstellt werden, welcher nochher innerhalb des Dev Containers angesprochen werden kann.
+
     kind create cluster --config kind-config.yaml --name kind --retain
+    
+Feintuning:
+* `~/.kube/config` - Ausserhalb des Dev Containers server: https: auf `https://127.0.0.1:6443 ändern. Und Datei in Dev Container kopieren.
+* Innerhalb des Dev Containers IP-Adresse des Docker Netzwerkes verwenden. Zuerst `kubectl --kubeconfig config get pods` ausführen, dann erscheint in der Fehlermeldung die IP des K8s Clusters.
     
 **Dashboard und PersistentVolume**
 

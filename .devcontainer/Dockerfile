@@ -41,14 +41,16 @@ RUN python3 -m venv /opt/jupyter \
       --sys-prefix --name=jupyter --display-name="Python (jupyter)"
 
 # -------------------------
-# kind && kubectl
+# kind && kubectl && helm
 # -------------------------
 RUN curl -Lo kind "https://kind.sigs.k8s.io/dl/latest/kind-linux-amd64" \
     && chmod +x kind \
     && mv kind /usr/local/bin/
     
 RUN curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl" \
-    && install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl    
+    && install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+    
+RUN curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-4 | bash        
         
 # Mount for docker-in-docker 
 VOLUME [ "/var/lib/docker" ]    
