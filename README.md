@@ -1,8 +1,6 @@
-# duk
+# daas - Docker und Kubernetes as a Service
 
-Docker und Kubernetes as a Service
-
-Die zwei Profile sind wie folgt:
+Stellt zwei Dev Container zu Verfügung.
 * dd - Docker Desktop, d.h. docker CLI ist installiert es wird aber auf die Docker Desktop Umgebung zugegriffen
 * dind - Docker in Docker, d.h. es läuft eine interne Docker Umgebung im Dev Container
 
